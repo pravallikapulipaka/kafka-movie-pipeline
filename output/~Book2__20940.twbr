@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='trending_movies' inline='true' name='federated.1sfhzn11l65mor1ccjcja168jxst' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='trending_movies' name='textscan.15jnc6e0bmra491ghu4bo1jkjgnd'>
+            <connection class='textscan' directory='C:/Users/p n s srinivas/OneDrive/Desktop/Projects/kafka-movie-pipeline/output/trending_movies.csv' filename='trending_movies.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.15jnc6e0bmra491ghu4bo1jkjgnd' name='trending_movies.csv' table='[trending_movies#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='title' ordinal='0' />
+            <column datatype='integer' name='interactions' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[trending_movies.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[trending_movies.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[trending_movies.csv_2EB1FCA240D1441D8D7FE23B22D45AF5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>interactions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[interactions]</local-name>
+            <parent-name>[trending_movies.csv]</parent-name>
+            <remote-alias>interactions</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[trending_movies.csv_2EB1FCA240D1441D8D7FE23B22D45AF5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='trending_movies.csv' datatype='table' name='[__tableau_internal_object_id__].[trending_movies.csv_2EB1FCA240D1441D8D7FE23B22D45AF5]' role='measure' type='quantitative' />
+      <column caption='Interactions' datatype='integer' name='[interactions]' role='measure' type='quantitative' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_1uuc3810spaqfc18x9guw1ayiunr.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/19/2025 10:37:23 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>title</remote-alias>
+              <ordinal>0</ordinal>
+              <family>trending_movies.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[trending_movies.csv_2EB1FCA240D1441D8D7FE23B22D45AF5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>interactions</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[interactions]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>interactions</remote-alias>
+              <ordinal>1</ordinal>
+              <family>trending_movies.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[trending_movies.csv_2EB1FCA240D1441D8D7FE23B22D45AF5]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='trending_movies.csv' id='trending_movies.csv_2EB1FCA240D1441D8D7FE23B22D45AF5'>
+            <properties context=''>
+              <relation connection='textscan.15jnc6e0bmra491ghu4bo1jkjgnd' name='trending_movies.csv' table='[trending_movies#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='title' ordinal='0' />
+                  <column datatype='integer' name='interactions' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Top Trending Movies</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trending_movies' name='federated.1sfhzn11l65mor1ccjcja168jxst' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sfhzn11l65mor1ccjcja168jxst'>
+            <column-instance column='[__tableau_internal_object_id__].[trending_movies.csv_2EB1FCA240D1441D8D7FE23B22D45AF5]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:trending_movies.csv_2EB1FCA240D1441D8D7FE23B22D45AF5:qk]' pivot='key' type='quantitative' />
+            <column caption='trending_movies.csv' datatype='table' name='[__tableau_internal_object_id__].[trending_movies.csv_2EB1FCA240D1441D8D7FE23B22D45AF5]' role='measure' type='quantitative' />
+            <column caption='Interactions' datatype='integer' name='[interactions]' role='measure' type='quantitative' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[interactions]' derivation='Sum' name='[sum:interactions:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1sfhzn11l65mor1ccjcja168jxst].[sum:interactions:qk]' included-values='in-range' />
+          <slices>
+            <column>[federated.1sfhzn11l65mor1ccjcja168jxst].[sum:interactions:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1sfhzn11l65mor1ccjcja168jxst].[none:title:nk]' />
+              <text column='[federated.1sfhzn11l65mor1ccjcja168jxst].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1sfhzn11l65mor1ccjcja168jxst].[sum:interactions:qk]</rows>
+        <cols>[federated.1sfhzn11l65mor1ccjcja168jxst].[none:title:nk]</cols>
+      </table>
+      <simple-id uuid='{146842BB-2E16-4B8E-9254-E72D318F4055}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1sfhzn11l65mor1ccjcja168jxst].[none:title:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{97477320-CE3D-4869-ACBB-AED7F354590E}' />
+    </window>
+  </windows>
+</workbook>
